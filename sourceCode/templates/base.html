@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><head><title>Arcade Shop</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='general_css.css') }}">
+</head><body class="bg-dark text-white p-4">
+<div class="container"><nav class="d-flex justify-content-between mb-4 border-bottom pb-2">
+<h3>🛒 Arcade Shop</h3><div>
+{% if session.user %} <span>{{ session.user }} | 💰 {{ session.score }}</span> <a href="/logout" class="btn btn-sm btn-danger ms-2">Esci</a>
+{% else %} <a href="/login" class="btn btn-sm btn-primary">Login</a> <a href="/register" class="btn btn-sm btn-secondary">Registrati</a> {% endif %}
+</div></nav>
+{% for cat, msg in get_flashed_messages(with_categories=true) %} <div class="alert alert-{{cat}}">{{msg}}</div> {% endfor %}
+{% block content %}{% endblock %}</div></body></html>

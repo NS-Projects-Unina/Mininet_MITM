@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row"> {% for p in products %}
+<div class="col-md-3"><div class="card bg-secondary mb-3"><div class="card-body">
+<h5 class="card-title">{{ p.name }}</h5><p>{{ p.desc }}</p>
+<h6 class="text-warning">{{ p.price }} Punti</h6>
+{% if session.user %} <a href="/buy/{{p.id}}" class="btn btn-success w-100">Compra</a>
+{% else %} <small>Accedi per comprare</small> {% endif %}
+</div></div></div> {% endfor %} </div>
+{% endblock %}
