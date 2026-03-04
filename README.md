@@ -151,7 +151,11 @@ In questa sezione del documento sono riportate e descritte esclusivamente le fas
 **4. Conclusione:** Il backend del server riceve il pacchetto alterato e aggiorna il database incrementando i fondi dell'utente. A questo punto l'attaccante (o l'utente "complice") accede all'interfaccia web dell'e-commerce e sfrutta il credito ottenuto per acquistare ciò che desidera.
 
 
+
 ---
 
+
+
+_Autore: Fabio Fiumara (M63001795)_
 
 
