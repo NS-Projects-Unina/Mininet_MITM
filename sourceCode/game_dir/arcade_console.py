@@ -30,16 +30,15 @@ def auth_menu():
         print(" Ciao giocatore! Seleziona l'azione preliminare: ")
         print("="*32)
         print("1. Accedi")
-        print("2. Registrati")
-        print("3. Esci")
+        print("2. Esci")
         choice = input("Scelta: ")
         
-        if choice == '3': sys.exit()
-        if choice not in ['1', '2']: continue
+        if choice == '2': sys.exit()
+        elif choice != '1': continue
         
         user = input("Username: ")
         pwd = input("Password: ")
-        action = "LOGIN" if choice == '1' else "REGISTER"
+        action = "LOGIN"
         
         resp = send_request({"action": action, "username": user, "password": pwd})
         print(f"\n>> {resp.get('msg')}")
