@@ -72,7 +72,6 @@ su kali -c "firefox http://arcade.shop" &
 3. Effettuare il login. Notare che il saldo punti è **0** e non è possibile acquistare la Lamborghini.
 4. Chiudere o minimizzare Firefox.
 
-*P.S: Questa procedura poteva essere effettuata direttamente dalla console di gioco, avviando lo script 'arcade_console.py' e selezionando l'opzione "2. Registrati".*
 
 ---
 
